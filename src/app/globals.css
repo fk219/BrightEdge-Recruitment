@@ -1,0 +1,453 @@
+@import "tailwindcss";
+
+/* Font Definitions */
+/* ================ */
+
+/* Bitter Font Classes */
+.font-bitter {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.bitter-thin {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.bitter-extralight {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.bitter-light {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bitter-regular {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bitter-medium {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.bitter-semibold {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bitter-bold {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bitter-extrabold {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.bitter-black {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Bitter Italic Variants */
+.bitter-thin-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.bitter-extralight-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.bitter-light-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.bitter-regular-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bitter-medium-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.bitter-semibold-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.bitter-bold-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.bitter-extrabold-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.bitter-black-italic {
+  font-family: var(--font-bitter), serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Performance Optimizations */
+/* ======================== */
+
+/* Optimize animations for better performance */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable GSAP animations */
+  .gsap-animation {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Custom Scrollbar Styling */
+/* ======================= */
+
+/* For WebKit browsers (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+  width: 10px;               /* Width of the scrollbar */
+  height: 10px;              /* Height of horizontal scrollbar */
+}
+
+/* Track - the area behind the scrollbar */
+::-webkit-scrollbar-track {
+  background: #0f172a;        /* Dark blue-gray background */
+  border-radius: 5px;         /* Rounded corners */
+}
+
+/* Handle - the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #1e40af;        /* Bright blue color */
+  border-radius: 5px;         /* Rounded corners */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;        /* Lighter blue on hover */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Subtle glow effect */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;                     /* "auto" or "thin" */
+  scrollbar-color: #1e40af #0f172a;         /* thumb and track color */
+}
+
+/* For Edge and IE */
+* {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* Auto-hide scrollbar when not in use */
+  scroll-behavior: smooth;                   /* Smooth scrolling */
+}
+
+/* Optional: Style scrollbar for specific elements with class 'custom-scroll' */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+/* For Firefox */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #0f172a;
+}
+
+/* Enhanced Animation Styles */
+/* ======================== */
+
+.enhanced-scroll-animation {
+  will-change: transform, opacity;
+}
+
+.enhanced-scroll-animation.animate-in {
+  /* Add any additional styles when animation is active */
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Improved focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced focus styles for better accessibility */
+.focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #3b82f6;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Hover effects for cards */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient text animations */
+.gradient-text {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Pulse animation for attention-grabbing elements */
+.pulse-attention {
+  animation: pulse-attention 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-attention {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Floating animation for decorative elements */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Debug styles for development */
+.debug-scroll {
+  outline: 2px solid red;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-responsive {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+  }
+}
+
+@media (min-width: 1025px) {
+  .text-responsive {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card-hover:hover {
+    border: 2px solid #000;
+  }
+  
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --scrollbar-track: #1f2937;
+    --scrollbar-thumb: #4b5563;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+}
+
+/* Performance optimizations for animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduce layout shift */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize for Core Web Vitals */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
